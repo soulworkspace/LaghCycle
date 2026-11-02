@@ -1,68 +1,51 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
-
 <p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
+  <a href="#" target="_blank">
+    <img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="300" alt="LC Pro Logo">
+  </a>
 </p>
 
-## About Laravel
+<h1 align="center"><b>Laghouat Cycle (LC Pro)</b></h1>
+<p align="center"><b>منصة متطورة لإدارة وعرض بيع الدراجات والسكوترات في الأغواط، الجزائر</b></p>
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+<p align="center">
+  <img src="https://img.shields.io/badge/Laravel-11.x-10b981?style=flat-square&logo=laravel" alt="Laravel Version">
+  <img src="https://img.shields.io/badge/Livewire-v3-047857?style=flat-square&logo=livewire" alt="Livewire">
+  <img src="https://img.shields.io/badge/TailwindCSS-v3-38bdf8?style=flat-square&logo=tailwindcss" alt="TailwindCSS">
+  <img src="https://img.shields.io/badge/Status-Production-10b981?style=flat-square" alt="Status">
+</p>
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+---
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## 🚀 نبذة عن المشروع (About LC Pro)
 
-## Learning Laravel
+**Laghouat Cycle (LC Pro)** هو نظام منصة إلكترونية متكامل ومخصص لسوق الدراجات والنارية وسكوترات في ولاية الأغواط. تم بناء المنصة باستخدام أحدث تقنيات الويب لضمان تجربة مستخدم سريعة، سلسة، وآمنة للمشترين والبائعين.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+### ✨ أبرز المميزات (Key Features)
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+- **لوحة تحكم احترافية (Admin & Vendor Dashboard):** تصميم مظلم فاخر (Dark Mode) متناسق مع المعايير الحديثة، وإحصائيات دقيقة ومباشرة (KPIs).
+- **نظام إضافة وإدارة الإعلانات المتقدم:** دعم رفع الصور المتعددة مع التخزين السحابي ومعاينة وتحديد الصورة الرئيسية بسلاسة عبر **Livewire**.
+- **دعم كامل للغة العربية (RTL):** واجهة مستخدم مصممة خصيصاً للجمهور العربي مع خطوط عربية أصيلة (Almarai).
+- **فئات متقدمة وتصنيف دقيق:** تصفية حسب الفئة، سنة الصنع، سعة المحرك (CC)، المسافة المقطوعة، ونقل الحركة.
+- **أمان عالي ومراجعة الإعلانات:** نظام صلاحيات متطور للمستخدمين والبائعين مع مراجعة الإعلانات قبل نشرها رسمياً.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+---
 
-## Laravel Sponsors
+## 🛠️ التقنيات المستخدمة (Tech Stack)
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+يعتمد المشروع على أحدث منظومة تطوير متكاملة:
+- **Backend:** PHP 8.2+ / Laravel 11
+- **Reactive UI:** Laravel Livewire v3 & Alpine.js
+- **Styling:** Tailwind CSS & Bootstrap 5 (Responsive Layouts)
+- **Database:** MySQL
+- **Server Infrastructure:** Linux / cPanel Environment
 
-### Premium Partners
+---
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+## ⚙️ التثبيت والتشغيل المحلي (Installation)
 
-## Contributing
+إذا كنت ترغب في تشغيل المشروع محلياً على جهازك، اتبع الخطوات التالية:
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
-# Alicars
-# Alicars
+1. **استنسخ المستودع (Clone Repository):**
+   ```bash
+   git clone [https://github.com/your-username/laghouat-cycle.git](https://github.com/your-username/laghouat-cycle.git)
+   cd laghouat-cycle
