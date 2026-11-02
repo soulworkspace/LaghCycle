@@ -1,0 +1,74 @@
+<?php
+
+namespace App\Livewire\Admin\Orders;
+
+use Livewire\Component;
+use App\Models\Order;
+use App\Models\OrderStatusHistory;
+use Illuminate\Support\Facades\DB;
+
+class OrderShow extends Component
+{
+    public Order $order;
+    public string $status = '';
+    public string $note = '';
+
+    public function mount(Order $order): void
+    {
+        $this->authorizeAdmin();
+
+        $this->order = $order;
+        $this->status = $order->status;
+    }
+
+    public function updatedStatus(string $value): void
+    {
+        $this->authorizeAdmin();
+
+        $allowedStatuses = ['pending', 'processing', 'shipped', 'delivered', 'completed', 'cancelled'];
+
+        if (! in_array($value, $allowedStatuses, true)) {
+            $this->status = $this->order->status;
+            return;
+        }
+
+        if ($value === $this->order->status) {
+            return;
+        }
+
+        DB::transaction(function () use ($value) {
+            // 1. تحديث الحالة في قاعدة البيانات
+            $this->order->update(['status' => $value]);
+
+            // 2. تسجيل التغيير في سجل الحالات
+            OrderStatusHistory::create([
+                'order_id' => $this->order->id,
+                'user_id'  => auth()->id(),
+                'status'   => $value,
+            ]);
+        });
+
+        $this->order->refresh();
+        $this->status = $this->order->status;
+        $this->note = '';
+
+        // Notify the current Livewire page without depending on an unavailable notification class.
+        $this->dispatch('status-updated', message: 'تم حفظ حالة الطلب بنجاح.');
+        session()->flash('success', 'تم تحديث حالة الطلب وتسجيل التغيير.');
+    }
+
+    public function render()
+    {
+        $this->authorizeAdmin();
+        $this->order->load(['buyer', 'listing', 'statusHistories.user']);
+
+        return view('livewire.admin.orders.order-details', [
+            'order' => $this->order
+        ])->layout('layouts.admin');
+    }
+
+    private function authorizeAdmin(): void
+    {
+        abort_unless(auth()->user()?->isAdmin(), 403);
+    }
+}
